@@ -1,6 +1,8 @@
 Project Name: Turtle Cam
 Submission by Akrit Ghimire 18/11/23
 
+![Image showcase of project in action](./Archived/60rays.png "Picture of what the project looks like")
+
 -- Be sure to watch the PromoVideo.mp4 to set the atmosphere!
 -- Link can be found here if not present in the file directory
 -- Link: https://youtu.be/ul_8ifURjf0
