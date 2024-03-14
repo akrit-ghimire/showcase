@@ -1,0 +1,162 @@
+:root {
+    --main-dark: rgb(29,29,29);
+    --dark: rgb(37, 34, 37);
+    --magenta: rgb(255,0,255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html { font-size: 16px; }
+body { display: flex;flex-direction: column; width: 100%; height: 100%; }
+
+/* <create-page>
+</create-page>
+<body-cam-page>
+    <canvas width="512" height="256"></canvas>
+</body-cam-page>
+<tabs>
+</tabs> */
+
+create-page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-dark);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+create-page div {
+    margin-top: -5rem;
+}
+grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 400px;
+    height: 400px;
+    background-color: var(--dark);
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    padding: 2px;
+}
+grid-square {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: cell;
+    border: thin solid var(--main-dark);
+}
+.canHoverSquare :hover {
+    background-color: var(--magenta) !important;
+}
+
+io {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+}
+buttons {
+    display: flex;
+    max-width: 512px;
+}
+buttons button, io button {
+    background-color: var(--dark);
+    color: #f3f3f3;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border: thin solid var(--main-dark);
+}
+buttons button {
+    width: 100%;
+}
+buttons button:first-child {
+    border-left: none;
+}
+buttons button:last-child {
+    border-right: none;
+}
+buttons button:hover, io button:hover {
+    opacity: 0.8;
+}
+buttons button:active, io button:active {
+    opacity: 0.7;
+}
+
+
+body-cam-page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-dark);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body-cam-page div {
+    display: flex;
+    width: 512px;
+    justify-content: space-between;
+    padding: .5rem 0rem;
+    font-size: .75rem;
+}
+
+body-cam-page div #live {
+    color: red;
+    font-weight: bold;
+    animation: fadeinout 3s infinite;
+}
+
+body-cam-page div #date {
+    color: #f3f3f3;
+}
+
+@keyframes fadeinout
+{
+  0% { opacity:0 }
+  50% { opacity:1 }
+  100% { opacity:0 }
+}
+
+body-cam-page canvas {
+    margin-bottom: 8rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+tabs {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+tabs button {
+    background-color: var(--dark);
+    color: #f3f3f3;
+    outline: none;
+    border: none;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    border: thin solid var(--main-dark);
+}
+tabs button:hover {
+    opacity: 0.8;
+}
+tabs button:active {
+    opacity: 0.7;
+}
+.active {
+    color: var(--magenta) !important
+}
