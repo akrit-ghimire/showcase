@@ -1,6 +1,8 @@
 Project Name: Turtle Cam
 Submission by Akrit Ghimire 18/11/23
 
+**Important note to add. Higher Level Graphics libraries did not work for me so I had to use Juicy Pixels (which generates static images only) and define each pixel colour manually. Therefore each pixel in the image has a functional definition and each frame in the animation is created systematically by the code**
+
 ![Image showcase of project in action](./Archived/60rays.png "Picture of what the project looks like")
 
 -- Be sure to watch the PromoVideo.mp4 to set the atmosphere!
